@@ -10,21 +10,15 @@ datagroup: ecommerce_pdt_default_datagroup {
 
 persist_with: ecommerce_pdt_default_datagroup
 
-explore: order_payment {
-  join: orders {
-    type: left_outer
-    sql_on: ${order_payment.order_id} = ${orders.order_id} ;;
-    relationship: many_to_one
-  }
 
-  join: customers {
-    type: left_outer
-    sql_on: ${orders.customer_id} = ${customers.customer_id} ;;
-    relationship: many_to_one
-  }
-}
 
-explore: customers {}
+explore: native_derived_table {}
+
+explore: native_derived_table2 {}
+
+explore: sql_derived_table {}
+
+
 
 explore: order_items {
   join: products {
@@ -51,6 +45,22 @@ explore: order_items {
     relationship: many_to_one
   }
 }
+
+explore: order_payment {
+  join: orders {
+    type: left_outer
+    sql_on: ${order_payment.order_id} = ${orders.order_id} ;;
+    relationship: many_to_one
+  }
+
+  join: customers {
+    type: left_outer
+    sql_on: ${orders.customer_id} = ${customers.customer_id} ;;
+    relationship: many_to_one
+  }
+}
+
+explore: customers {}
 
 explore: geolocation {}
 
