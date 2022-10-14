@@ -1,5 +1,10 @@
 connection: "ecommerce_with_pdt"
 
+
+# Comentário para gerar novo commit
+
+
+
 # include all the views
 include: "/views/**/*.view"
 
