@@ -1,4 +1,5 @@
 view: sql_derived_table {
+
   derived_table: {
     sql:
       SELECT

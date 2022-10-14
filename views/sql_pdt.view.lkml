@@ -1,6 +1,12 @@
 view: sql_pdt {
+
+
   derived_table: {
+
     datagroup_trigger: ecommerce_pdt_default_datagroup
+
+
+
     sql:
       SELECT
         orders.order_id  AS id_compra,
@@ -10,6 +16,11 @@ view: sql_pdt {
         `ecommerce_dataset.order_items` AS order_items LEFT JOIN
         `ecommerce_dataset.orders` AS orders ON order_items.order_id = orders.order_id  ;;
   }
+
+
+
+
+
 
   dimension: id_compra {
     type: number
