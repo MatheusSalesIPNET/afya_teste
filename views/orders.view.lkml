@@ -107,7 +107,4 @@ view: orders {
       value: "6 months ago"
     }
   }
-
-
-
 }
