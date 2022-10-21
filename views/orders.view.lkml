@@ -94,4 +94,20 @@ view: orders {
     type: count
     drill_fields: [order_id, customers.customer_id, order_payment.count, order_items.count, order_reviews.count]
   }
+
+
+  parameter: date_filter {
+    type: "unquoted"
+    allowed_value: {
+      label: "Últimos 3 meses"
+      value: "3 months ago"
+    }
+    allowed_value: {
+      label: "Últimos 6 meses"
+      value: "6 months ago"
+    }
+  }
+
+
+
 }
